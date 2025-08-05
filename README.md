@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <strong>Estudante:</strong> Gustavo Budny de Souza<br>
-  <strong>Idade:</strong> 16 anos<br>
+  <strong>Estudante:</strong> Guilherme Poma Cercena<br>
+  <strong>Idade:</strong> 17anos<br>
   <strong>Ferramenta Principal:</strong> Unity (C#)
 </p>
 

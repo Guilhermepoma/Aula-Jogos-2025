@@ -54,13 +54,11 @@ public class Player : MonoBehaviour
             isGround = false;
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "tagGround")
         {
             isGround = true;
-            Debug.Log("ta funfando");
         }
     }
 }

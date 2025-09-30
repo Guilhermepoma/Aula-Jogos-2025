@@ -18,8 +18,7 @@ public class Coins : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("colidiu");
-            pontos += 10;
+            pontos += 1;
             Debug.Log(pontos);
         }
     }

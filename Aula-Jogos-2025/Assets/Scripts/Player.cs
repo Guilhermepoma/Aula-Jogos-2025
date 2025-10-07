@@ -6,12 +6,16 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigd;
     public float speed;
 
+    public Vector2 posicaoInicial;
+    public GameManager gameManager;
+
     ///Pulo
     public float jumpForce;
     public bool isGround;
 
     void Start()
     {
+        posicaoInicial = transform.position;
         anim=GetComponent<Animator>();
         rigd=GetComponent<Rigidbody2D>();
     }
@@ -59,6 +63,19 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "tagGround")
         {
             isGround = true;
+        }
+    }
+
+    public void ReiniciarPosicao()
+    {
+        transform.position = posicaoInicial;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("morreu"))
+        {
+            transform.position = posicaoInicial;
         }
     }
 }

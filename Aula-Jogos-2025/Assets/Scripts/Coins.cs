@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    private float pontos;
-
+    public GameManager gameManager;
     void Start()
     {
         
@@ -18,8 +17,8 @@ public class Coins : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            pontos += 1;
-            Debug.Log(pontos);
+            gameManager.AddPontos(1);
+            Destroy(gameObject);
         }
     }
 }

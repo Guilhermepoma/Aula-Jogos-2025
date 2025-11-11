@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     public Vector2 posicaoInicial;
     public GameManager gameManager;
+    private PlayAudio PlayAudio;
 
     ///Pulo
     public float jumpForce;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         posicaoInicial = transform.position;
         anim=GetComponent<Animator>();
         rigd=GetComponent<Rigidbody2D>();
+        PlayAudio=GetComponent<PlayAudio>();
     }
 
     void Update()
@@ -56,6 +58,7 @@ public class Player : MonoBehaviour
             rigd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetInteger("transitions", 2);
             isGround = false;
+            PlayAudio.PlaySFX(PlayAudio.JumpSound);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,5 +80,11 @@ public class Player : MonoBehaviour
         {
             transform.position = posicaoInicial;
         }
+
+
+
+
+
+
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tagGround
   - morreu
+  - tagMoeda
   layers:
   - Default
   - TransparentFX

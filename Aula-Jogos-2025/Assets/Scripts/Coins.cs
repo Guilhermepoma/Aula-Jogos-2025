@@ -3,9 +3,11 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     public GameManager gameManager;
+
+
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -17,8 +19,12 @@ public class Coins : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayAudio som = collision.GetComponent<PlayAudio>();
+            som.PlaySFX(som.CoinSound);
+
             gameManager.AddPontos(1);
             Destroy(gameObject);
+
         }
     }
 }
